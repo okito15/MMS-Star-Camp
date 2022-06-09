@@ -1,0 +1,5 @@
+Най-голямото число Linux Command
+sort -k2 -nr numbers.txt | head -1
+
+Най-малкото число Linux Command
+sort -k2 -nr numbers.txt | tail -1
