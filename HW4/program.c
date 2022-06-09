@@ -2,7 +2,7 @@
 
 void swap (int*, int*);
 
-int main(void){
+int main(void) {
 	int num1, num2;
 	printf("Enter first number: ");
 	scanf("%d", &num1);

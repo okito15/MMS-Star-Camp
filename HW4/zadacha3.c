@@ -1,27 +1,24 @@
-//TODO
-//number validation
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int value(char c){
-	if(c >= '0' && c<= '9'){
+int value(char c) {
+	if(c >= '0' && c <= '9') {
 		int result = c - '0';
 		return result;
-	} else{
+	} else {
 		int result = c - 'A' + 10;
 		return result;
 	}
 }
 
-long long int baseNToDecimal(char *str, int base){
+long long int baseNToDecimal(char *str, int base) {
 	int len = strlen(str);
 	int power = 1;
 	long long int num = 0;
-	for(int i = len - 1; i >= 0; i--){
+	for(int i = len - 1; i >= 0; i--) {
 		if(value(str[i]) >= base){
-			fprintf(stderr, "Invalid number\n");
+			fprintf(stderr, "Invalid number!\n");
 			return -1;
 		}
 
@@ -31,13 +28,13 @@ long long int baseNToDecimal(char *str, int base){
 	return num;
 }
 
-void decimalToBaseN(long int number, int base){
+void decimalToBaseN(long int number, int base) {
 	char convertedNumber[16];
 	int counter = 0;
-	while(number!=0){
+	while(number != 0){
 		int var = 0;
 		var = number % base;
-		if(var < 10){
+		if(var < 10) {
 			convertedNumber[counter] = var + 48;
 			counter++;
 		} else{
@@ -46,14 +43,14 @@ void decimalToBaseN(long int number, int base){
 		}
 		number /= base;
 	}
-	for(int i = counter - 1; i >= 0; i--){
+	for(int i = counter - 1; i >= 0; i--) {
 		printf("%c", convertedNumber[i]);
 	}
 	printf("\n");
 }
 
 
-int main(){
+int main() {
 	int length, inputBase, outputBase;
 	char number[16];
 	printf("Enter the number: ");
