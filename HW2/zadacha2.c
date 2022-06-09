@@ -18,10 +18,7 @@ int main()
         ch = fgetc(file);
         count++;
     } while(ch != EOF);
-    
-    printf("count = %d\n", count);
     count = count / 2;
-    printf("count = %d\n", count);
 
     fscanf(file, "%d", &number1);
     fscanf(file, "%d", &number2);
