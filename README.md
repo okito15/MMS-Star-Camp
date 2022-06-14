@@ -1,1 +1,1 @@
-# OKAN SEID files
+# OKAN SEID homework and exam files
